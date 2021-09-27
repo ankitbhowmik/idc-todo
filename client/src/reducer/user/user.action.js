@@ -48,12 +48,16 @@ export const userVerifyToken = () => async (dispatch) => {
 
 export const userUpdateUserInfo = (fullname, email, image) => async (dispatch, getState) => {
     const userId = getState().user.user_id;
+    const formData = new FormData();
+    formData.append("fullname", fullname);
+    formData.append("email", email)
+    formData.append("_id", userId);
+    if (image.name) formData.append("image", image, image.name);
     try {
         const res = await fetch("/user/update-info", {
             method: "put",
             credentials: "include",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ fullname, email, image, _id: userId })
+            body: formData
         });
         const data = await res.json();
         if (data.success) dispatch({ type: USERS_SET_LOGIN_INFO, data: data.data, isOnline: true })

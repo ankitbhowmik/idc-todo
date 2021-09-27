@@ -1,10 +1,13 @@
 .card{
     width: 400px;
+    margin-top:50px;
 }
 
 .card .card-image{
     position: relative;
-}
+    max-width: 350px;
+    max-height: 350px;
+    overflow: hidden;}
 
 .card .card-image .edit-icon{
     position: absolute;

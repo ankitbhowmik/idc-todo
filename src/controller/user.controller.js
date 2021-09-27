@@ -57,12 +57,13 @@ module.exports.verifyToken = (req, res) => {
 }
 
 module.exports.updateInfo = async (req, res) => {
-    const { fullname, email, image, _id } = req.body;
+    const { fullname, email, _id } = req.body;
+    const { filename } = req.file;
     try {
         const user = await User.findOne({ _id });
-        user.fullname = fullname;
-        user.email = email;
-        user.image = image;
+        user._doc.fullname = fullname;
+        user._doc.email = email;
+        user._doc.image = "/profile/" + filename;
         await user.save();
         res.send({ success: true, data: user });
     } catch (err) {

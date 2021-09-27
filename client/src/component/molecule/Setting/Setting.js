@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import "./setting.style.css"
+
 import { FiEdit } from 'react-icons/fi';
 import Input from '../../atom/Input/Input';
 import { userUpdateUserInfo } from '../../../reducer/user/user.action';
 
+import "./setting.style.css"
+
 const Setting = () => {
     const dispatch = useDispatch();
 
+    const [imagePreview, setImagePreview] = useState("");
     let { fullname, email, image } = useSelector(state => state.user);
     const [state, setState] = useState({
         fullname: "",
         email: "",
-        image: "",
+        image: {},
         disableFullname: true,
         disableEmail: true,
     })
@@ -28,6 +31,20 @@ const Setting = () => {
     const onSubmit = async () => {
         const data = await dispatch(userUpdateUserInfo(state.fullname, state.email, state.image));
         if (data.success) {
+            alert("data suuccessfully updated")
+        } else {
+            alert("oops something went wrong")
+        }
+    }
+
+    const uploadImage = (e) => {
+        const file = e.target.files[0];
+        if (["image/jpeg", "image/jpg", "image/png"].includes(file.type)) {
+            const objectUrl = URL.createObjectURL(file);
+            setImagePreview(objectUrl)
+            setState(prev => ({ ...prev, image: file }));
+        } else {
+            alert("oops only jpeg, jpg and png format are allowed");
         }
     }
 
@@ -35,9 +52,12 @@ const Setting = () => {
         <div className="flex flex-center animate-route">
             <div className="card">
                 <div className="card-image">
-                    <img src={image || "/user.jpg"} alt="John" style={{ width: "100%" }} />
+                    <img src={imagePreview || image || "/user.jpg"} alt="John" style={{ width: "100%" }} />
                     <div className="edit-icon">
-                        <FiEdit />
+                        <label htmlFor="image-upload">
+                            <FiEdit />
+                        </label>
+                        <input id="file-input" type="file" id="image-upload" style={{ display: "none", visibility: "none" }} onChange={uploadImage} />
                     </div>
                 </div>
                 <div>

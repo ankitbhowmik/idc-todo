@@ -11,7 +11,7 @@ import { todoSearchTodo } from '../../../reducer/todo/todo.action';
 
 const TopBar = () => {
     const dispatch = useDispatch();
-    const { fullname, users } = useSelector(state => state.user);
+    const { fullname, users, image } = useSelector(state => state.user);
     const [search, setSearch] = useState("");
     const [loading, setLoading] = useState(false);
 
@@ -41,7 +41,7 @@ const TopBar = () => {
                 }
             </div>
             <GroupAvatar avatars={users.map(user => user.image || "/user.jpg")} />
-            <Avatar title={`Hi ${fullname}`} imageSrc="/user.jpg" />
+            <Avatar title={`Hi ${fullname}`} imageSrc={image || "/user.jpg"} />
         </div>
     )
 }
