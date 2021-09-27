@@ -47,7 +47,7 @@ const SignupForm = () => {
     }
 
     return (
-        <div className="login-part">
+        <div className="login-part" style={{ marginBottom: 3 }}>
             <Input type="text" value={state.fullname} name="fullname" placeholder="Full Name" onChange={onChange} error={state.errors.fullname} />
             <Input type="text" value={state.email} name="email" placeholder="Email" onChange={onChange} error={state.errors.email} />
             <Input type="password" value={state.password} name="password" placeholder="Password" showPasswordIcon={true} onChange={onChange} error={state.errors.password} />

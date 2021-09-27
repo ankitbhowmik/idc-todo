@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { todoGetTodos, todoOnDropItem } from "../../../reducer/todo/todo.action";
 import TodoSection from "../../molecule/TodoSection/TodoSection";
 
-import "./mainProject.css";
-
 const MainProject = () => {
     const dispatch = useDispatch();
 
@@ -22,7 +20,7 @@ const MainProject = () => {
     const drop = (todoSectionName) => dispatch(todoOnDropItem(dragItemId.current, todoSectionName))
 
     return (
-        <div>
+        <div className="animate-route">
             <br />
             <div className="flex-space-between">
                 <h4>Projects</h4>

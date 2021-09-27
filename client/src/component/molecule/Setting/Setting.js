@@ -32,7 +32,7 @@ const Setting = () => {
     }
 
     return (
-        <div className="flex flex-center">
+        <div className="flex flex-center animate-route">
             <div className="card">
                 <div className="card-image">
                     <img src={image || "/user.jpg"} alt="John" style={{ width: "100%" }} />

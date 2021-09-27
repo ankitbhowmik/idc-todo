@@ -7,6 +7,16 @@
     max-height:220px;
 }
 
+.todo:not([draggable]){
+    transform-origin: top;
+    animation: dropdown 0.5s ease-out;
+}
+
+@keyframes dropdown {
+    from{transform: rotateX(80deg)}
+    to{transform: rotateX(0deg)}
+}
+
 .todo-title{
     word-break: break-all;
 }

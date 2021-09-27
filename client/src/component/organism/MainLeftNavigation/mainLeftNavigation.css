@@ -6,6 +6,12 @@
     position: sticky;
     top: 0;
     border-right: 2px solid #f1f1f1;
+    animation: slideFromLeft 0.2s ease-in-out;
+}
+
+@keyframes slideFromLeft {
+    from{transform: translateX(-300px);}
+    to{transform: translateX(0);}
 }
 
 .main-left-navigation{

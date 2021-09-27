@@ -9,3 +9,18 @@
     max-width: 1080px;
     margin: 0 auto;
 }
+
+.animate-route{
+    animation: pageCome 0.4s ease-in-out;
+}
+
+@keyframes pageCome {
+    from{
+        transform: rotate(45deg) translate(-23px, -192px);
+        opacity: 0.5;
+    };
+    to{
+        transform: rotate(0) translate(0, 0);
+        opacity: 1;
+    }
+}

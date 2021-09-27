@@ -31,12 +31,33 @@
     bottom: -5px;
     border-radius: 15px;
     border-top: 3px solid var(--idcblue);
+    animation: moveRightToLeft 0.2s ease-in-out;
+}
+
+.login-right-section-container .login-switch span.ml-25.active::after{
+    animation: moveLeftToRight 0.2s ease-in-out;
+}
+
+@keyframes moveLeftToRight {
+    from {transform: translateX(-55px)};
+    to{transform: translateX(0);}
+}
+
+@keyframes moveRightToLeft {
+    from {transform: translateX(55px)}
+    to {transform: translateX(0px)}
 }
 
 .login-part{
     border-top: 2px solid #f1f1f1;
+    animation: cardRotate 0.5s ease-in-out;
 }
 
 .login-part > *{
     margin: 20px 0;
+}
+
+@keyframes cardRotate{
+    from{transform: rotateY(180deg)};
+    to{transform: rotateY(0)};
 }

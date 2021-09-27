@@ -37,7 +37,7 @@ textarea::placeholder{
 }
 
 .ml-25{
-    margin-left:25px
+    margin-left:25px;
 }
 
 .blue-text{
@@ -76,6 +76,7 @@ textarea::placeholder{
     border-radius: 9px;
     color: white;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .cursor-pointer{

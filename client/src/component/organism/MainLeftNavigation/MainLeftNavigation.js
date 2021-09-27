@@ -20,7 +20,7 @@ const leftTopNav = [
 
 const MainLeftNavigation = () => {
     const dispatch = useDispatch();
-    const logout = ()=> dispatch(userLogout());
+    const logout = () => dispatch(userLogout());
 
     return (
         <div className="main-left-navigation-container">
@@ -46,7 +46,7 @@ const MainLeftNavigation = () => {
                         </div>
                     </NavLink>
                     <div>
-                        <div className="nav-link" onClick={logout}>
+                        <div className="nav-link cursor-pointer" onClick={logout}>
                             <FiLogOut className="nav-icon" />
                             <span className="nav-title">Logout</span>
                         </div>
