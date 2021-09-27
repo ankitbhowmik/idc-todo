@@ -1,0 +1,14 @@
+.checkbox{
+    display: flex;
+    gap: 10px;    
+    align-items: center;
+}
+
+.checkbox-check{
+    color: var(--idcgreen);
+    font-size: 20px;
+}
+
+.checkbox:hover .checkbox-check{
+    opacity: 0.5;
+}

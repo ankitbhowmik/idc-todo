@@ -1,0 +1,22 @@
+.todo-section-container{
+    min-height: 500px;
+    background-color: rgb(244, 249, 249);
+    border-radius: 10px;
+    padding: 15px;
+    width:100%;
+}
+
+.todo-button{
+    background-color: rgb(234, 243, 243);
+    border: none;
+    padding: 8px;
+    border-radius: 3px;
+    font-size: 1.1rem;
+    color: var(--idcgreen);
+    cursor:pointer;
+}
+
+.todo-button:active{
+    background-color: rgb(200, 249, 249);
+}
+

@@ -1,0 +1,14 @@
+.card{
+    width: 400px;
+}
+
+.card .card-image{
+    position: relative;
+}
+
+.card .card-image .edit-icon{
+    position: absolute;
+    right:0;
+    bottom:0;
+    background-color: aliceblue;
+}

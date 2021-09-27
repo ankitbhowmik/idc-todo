@@ -1,0 +1,28 @@
+.a-input-container{
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+}
+
+.input-error{
+    border: 1px solid tomato;
+}
+
+.a-input{
+    width: 100%;
+    border:none;
+    outline: none;
+    color:gray;
+    background-color: transparent;
+}
+
+.input-disabled {
+    border:none;
+}
+
+/* to hide default toggle password icon from edge browser*/
+input::-ms-reveal,
+  input::-ms-clear {
+    display: none;
+  }

@@ -1,0 +1,12 @@
+.login-page{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 650px) {
+    .login-hero-image{
+        display: none;
+    }
+}

@@ -1,0 +1,26 @@
+.todo{
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    max-height:220px;
+}
+
+.todo-title{
+    word-break: break-all;
+}
+
+.todo-description{
+    color:gray;
+    word-break: break-all;
+}
+
+.todo h5{
+    margin: 10px 0;
+}
+
+.todo p{
+    font-size:0.8rem;
+    color: gray;
+}
