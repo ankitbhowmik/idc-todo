@@ -15,7 +15,7 @@ const Todo = ({ todo, dragStart, dragEnd }) => {
             <h5 className="todo-title">{todo.title}</h5>
             <p className="todo-description">{todo.description}</p>
             <div className="flex-space-between">
-                <Avatar small imageSrc="/user.jpg" />
+                <Avatar small imageSrc={todo.userId.image || "/user.jpg"} />
                 <IoChatboxOutline color="gray" />
             </div>
         </div>
