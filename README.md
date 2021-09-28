@@ -32,4 +32,4 @@ CLIENT_URL=http://localhost:3000
 5. After login user can create todo task.
 6. todo task can be viewed and deleted.
 7. user can search todo using search.
-8. user can edit their email and name.
+8. user can edit their email and name and change their profile picture.
