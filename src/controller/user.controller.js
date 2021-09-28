@@ -61,9 +61,9 @@ module.exports.updateInfo = async (req, res) => {
     const { filename } = req.file;
     try {
         const user = await User.findOne({ _id });
-        user._doc.fullname = fullname;
-        user._doc.email = email;
-        user._doc.image = "/profile/" + filename;
+        user.fullname = fullname;
+        user.email = email;
+        user.image = "/profile/" + filename;
         await user.save();
         res.send({ success: true, data: user });
     } catch (err) {

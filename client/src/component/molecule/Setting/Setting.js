@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { FiEdit } from 'react-icons/fi';
@@ -57,7 +57,7 @@ const Setting = () => {
                         <label htmlFor="image-upload">
                             <FiEdit />
                         </label>
-                        <input id="file-input" type="file" id="image-upload" style={{ display: "none", visibility: "none" }} onChange={uploadImage} />
+                        <input type="file" id="image-upload" style={{ display: "none", visibility: "none" }} onChange={uploadImage} />
                     </div>
                 </div>
                 <div>

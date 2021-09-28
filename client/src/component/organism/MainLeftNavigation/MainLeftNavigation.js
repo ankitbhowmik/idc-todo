@@ -20,7 +20,11 @@ const leftTopNav = [
 
 const MainLeftNavigation = () => {
     const dispatch = useDispatch();
-    const logout = () => dispatch(userLogout());
+    const logout = () => {
+        if (window.confirm("Are you sure you want to logout?")) {
+            dispatch(userLogout());
+        }
+    }
 
     return (
         <div className="main-left-navigation-container">
